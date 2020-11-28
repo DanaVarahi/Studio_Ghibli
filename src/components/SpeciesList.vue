@@ -62,7 +62,7 @@ export default {
             this.speciesData = []
             let res
             for ( const url of this.species) {
-                console.log(url)
+               
                 fetch(url)
                 .then(res => res.json())
                 .then( data => this.processSpeciesData(data))
