@@ -1,6 +1,6 @@
 <template>
     <section v-if="currentFilm">
-        <h2>>{{ currentFilm.title }}</h2>
+        <h2>{{ currentFilm.title }}</h2>
         <p>Relese Date: {{ currentFilm.release_date }}</p>
         <p>Director: {{ currentFilm.director }}</p>
         <p>Producer: {{ currentFilm.producer }}</p>
