@@ -32,5 +32,13 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-family: 'Lora', serif;
+  color: darkblue;
+}
+
+.v-select {
+  font-family: 'Lora', serif;
+}
 
 </style>
