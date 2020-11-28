@@ -1,7 +1,8 @@
 <template>
 <div>
   <h1>Welcome to Studio Ghibli</h1>
-  <p>{{ films }}</p>
+  <v-select :options="films" label="title" v-model="selectedFilm"></v-select>
+  <p>{{ selectedFilm }}</p>
 </div> 
 </template>
 
@@ -10,7 +11,8 @@ export default {
   name: "app",
   data(){
     return {
-      films: [] 
+      films: [],
+      selectedFilm: null
     }
   },
 
