@@ -5,12 +5,12 @@
         <p><b>Director:</b> {{ currentFilm.director }}</p>
         <p><b>Producer:</b> {{ currentFilm.producer }}</p>
         <p><b>Plot:</b> {{ currentFilm.description }}</p>
-        <species-list :species="getSpeciesURL" ></species-list>
+        <species-chart :species="getSpeciesURL" ></species-chart>
     </section>
 </template>
 
 <script>
-import SpeciesList from './SpeciesList.vue'
+import SpeciesChart from './SpeciesChart.vue'
 
 export default {
     name: 'selected-film',
@@ -28,7 +28,7 @@ export default {
     },
 
     components: {
-        'species-list': SpeciesList
+        'species-chart': SpeciesChart
     }
 }
 </script>

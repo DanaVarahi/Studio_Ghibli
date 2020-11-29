@@ -9,7 +9,7 @@
 
 
 export default {
-    name: 'species-list',
+    name: 'species-chart',
     data(){
         return {
             speciesData: []
