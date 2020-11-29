@@ -34,10 +34,7 @@ export default {
 </script>
 
 <style scoped>
-section {
-    width: 70%;
-    margin: auto;
-}
+
 h2 {
     font-family: 'Lora', serif;
     color:  rgb(143, 126, 49);
@@ -46,4 +43,5 @@ h2 {
 .film-detail{
      font-family: 'Lora', serif;
 }
+
 </style>

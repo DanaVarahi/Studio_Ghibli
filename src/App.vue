@@ -56,4 +56,10 @@ header {
   height: 15em;
 }
 
+@media only screen and (max-width: 700px){
+  #content{
+  width: 100%;
+}
+}
+
 </style>
