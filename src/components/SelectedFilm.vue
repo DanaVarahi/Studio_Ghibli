@@ -5,12 +5,16 @@
         <p><b>Director:</b> {{ currentFilm.director }}</p>
         <p><b>Producer:</b> {{ currentFilm.producer }}</p>
         <p><b>Plot:</b> {{ currentFilm.description }}</p>
-        <species-chart :species="getSpeciesURL" ></species-chart>
+        <div id="charts">
+            <species-chart :species="getSpeciesURL" ></species-chart>
+            <vehicles-chart :vehicles="getVehiclesURL" ></vehicles-chart>
+        </div>
     </section>
 </template>
 
 <script>
 import SpeciesChart from './SpeciesChart.vue'
+import VehiclesChart from './VehiclesChart.vue'
 
 export default {
     name: 'selected-film',
@@ -18,17 +22,23 @@ export default {
     data(){
         return {
             species:[],
+            vehicles: [],
         }
     },
 
     computed: {
         getSpeciesURL: function(){
             return this.currentFilm.species
+        },
+
+        getVehiclesURL: function(){
+            return this.currentFilm.vehicles
         }
     },
 
     components: {
-        'species-chart': SpeciesChart
+        'species-chart': SpeciesChart,
+        'vehicles-chart': VehiclesChart
     }
 }
 </script>
@@ -44,4 +54,14 @@ h2 {
      font-family: 'Lora', serif;
 }
 
+#charts {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 930px) {
+#charts {
+    flex-direction: column;
+}
+}
 </style>

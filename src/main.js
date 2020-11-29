@@ -5,7 +5,6 @@ import "vue-select/dist/vue-select.css";
 
 Vue.component("v-select", vSelect);
 Vue.config.productionTip = false
-export const eventBus = new Vue()
 
 new Vue({
   render: h => h(App),

@@ -2,12 +2,9 @@
 <div>
     <div id="chart_div"></div>
 </div>
-
 </template>
 
 <script>
-
-
 export default {
     name: 'species-chart',
     data(){
@@ -32,6 +29,7 @@ export default {
     methods: {
        
         processSpeciesData: function(data){
+            
             const speciesName = data.name
             const totalCharacters = data.people.length
 
@@ -51,7 +49,13 @@ export default {
         // Set chart options
             var options = {'title':'Species of the Characters',
                             'width':400,
-                            'height':300};
+                            'height':300,
+                            'is3D': true,
+                            'colors':['#E0D991','#91DBE0','#D691E0'],
+                            'fontName': 'Lora',
+                            'titleTextStyle': {'fontSize': 15,
+                                                'color': '927E31'}
+                            };
 
         // Instantiate and draw our chart, passing in some options.
             var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -76,6 +80,6 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
 </style>
