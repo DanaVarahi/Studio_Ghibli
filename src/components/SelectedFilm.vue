@@ -1,10 +1,10 @@
 <template>
     <section v-if="currentFilm" class="film-detail">
         <h2>{{ currentFilm.title }}</h2>
-        <p>Relese Date: {{ currentFilm.release_date }}</p>
-        <p>Director: {{ currentFilm.director }}</p>
-        <p>Producer: {{ currentFilm.producer }}</p>
-        <p>Plot: {{ currentFilm.description }}</p>
+        <p><b>Relese Date:</b> {{ currentFilm.release_date }}</p>
+        <p><b>Director:</b> {{ currentFilm.director }}</p>
+        <p><b>Producer:</b> {{ currentFilm.producer }}</p>
+        <p><b>Plot:</b> {{ currentFilm.description }}</p>
         <species-list :species="getSpeciesURL" ></species-list>
     </section>
 </template>
@@ -23,9 +23,7 @@ export default {
 
     computed: {
         getSpeciesURL: function(){
-           
             return this.currentFilm.species
-             console.log(species)
         }
     },
 
@@ -36,9 +34,13 @@ export default {
 </script>
 
 <style scoped>
+section {
+    width: 70%;
+    margin: auto;
+}
 h2 {
     font-family: 'Lora', serif;
-    color: darkblue;
+    color:  rgb(143, 126, 49);
 }
 
 .film-detail{

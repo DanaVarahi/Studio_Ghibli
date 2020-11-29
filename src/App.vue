@@ -1,8 +1,11 @@
 <template>
 <div>
-  <h1>Welcome to Studio Ghibli</h1>
-  <v-select :options="films" label="title" v-model="currentFilm"></v-select>
-  <selected-film :currentFilm="currentFilm"></selected-film>
+  <header></header>
+  <div id="content">
+    <h1>Select a film:</h1>
+    <v-select :options="films" label="title" v-model="currentFilm"></v-select>
+    <selected-film :currentFilm="currentFilm"></selected-film>
+  </div>
 </div> 
 </template>
 
@@ -32,13 +35,25 @@ export default {
 </script>
 
 <style scoped>
+#content{
+  width: 70%;
+  margin: auto;
+}
+
 h1 {
   font-family: 'Lora', serif;
-  color: darkblue;
+  color: rgb(143, 126, 49);
 }
 
 .v-select {
   font-family: 'Lora', serif;
+}
+
+header {
+  background-image: url('./assets/ghibli_logo_gold.png');
+  background-repeat:  no-repeat;
+  background-position: center;
+  height: 15em;
 }
 
 </style>

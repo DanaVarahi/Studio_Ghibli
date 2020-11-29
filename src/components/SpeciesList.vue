@@ -18,7 +18,7 @@ export default {
     props: ['species'],
 
     watch: {
-        immediate: true,
+        // immediate: true,
         species: function(){
            this.processUrls()
         }  
